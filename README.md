@@ -5,6 +5,20 @@
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
 More information can be found at the [official site](https://codeigniter.com).
 
+## fitur
+
+    HTML Tabel (Style Boostrap) dengan fitur  -Search/Filter, Pagination, Sorting -  menggunakan Ajax, tidak menggunakan Datatable. Fungsi Sorting dengan mengklik caption di header kolom;
+    Fungsi sama dengan poin 1, tapi dengan style Cards Bootsrap;
+    Fungsi CRUD dengan form text, select, text area, chaining select, upload pdf dengan validasi di server/controller;
+    Membuat contoh Restful API (as REST API Server);
+    Membuat contoh memanggil Resful API dari luar (as REST API Client);
+    Membuat Qrcode berlogo;
+    Membuat pdf surat dengan fpdf atau tcpdf dan terdapat qrcode berlogo;
+    Membuat script kirim email (di Controller saja/hardcode);
+    Membuat script kirim whatsapp (di Controller saja/hardcode);
+    Impor/Export data excel (Di controller saja/hardcode);
+    Membuat File Manager, pada folder tertentu tampilkan hanya file pdf/png dan dapat masuk ke subfolder terdapat fitur hapus/rename/copy/move/upload.  
+
 This repository holds a composer-installable app starter.
 It has been built from the
 [development repository](https://github.com/codeigniter4/CodeIgniter4).
