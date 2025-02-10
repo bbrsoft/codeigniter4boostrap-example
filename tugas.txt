@@ -1,0 +1,14 @@
+Saya memerlukan sample-sampel code menggunakan Codeigniter 4 + Bootstrap 5 + jquery untuk fungsi-fungsi berikut:
+   
+###################
+    Membuat contoh Restful API (as REST API Server); DONE
+    Membuat contoh memanggil Resful API dari luar (as REST API Client); DONE
+    Membuat Qrcode berlogo; DONE
+    Membuat pdf surat dengan fpdf atau tcpdf dan terdapat qrcode berlogo; DONE
+    Membuat script kirim email (di Controller saja/hardcode); DONE
+    Impor/Export data excel (Di controller saja/hardcode); DONE
+    Membuat script kirim whatsapp (di Controller saja/hardcode); DONE
+    HTML Tabel (Style Boostrap) dengan fitur  -Search/Filter, Pagination, Sorting -  menggunakan Ajax, tidak menggunakan Datatable. Fungsi Sorting dengan mengklik caption di header kolom; DONE
+    Fungsi sama dengan poin 1, tapi dengan style Cards Bootsrap; DONE
+    Fungsi CRUD dengan form text, select, text area, chaining select, upload pdf dengan validasi di server/controller; DONE
+    Membuat File Manager, pada folder tertentu tampilkan hanya file pdf/png dan dapat masuk ke subfolder terdapat fitur hapus/rename/copy/move/upload. DONE
