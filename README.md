@@ -5,6 +5,8 @@
 CodeIgniter is a PHP full-stack web framework that is light, fast, flexible and secure.
 More information can be found at the [official site](https://codeigniter.com).
 
+## PHP 8.1
+
 ## fitur
 
     HTML Tabel (Style Boostrap) dengan fitur  -Search/Filter, Pagination, Sorting -  menggunakan Ajax, tidak menggunakan Datatable. Fungsi Sorting dengan mengklik caption di header kolom;
