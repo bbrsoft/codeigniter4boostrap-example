@@ -54,20 +54,26 @@ class FileManagerController extends Controller
     return redirect()->to('/file-manager/' . $folder)->with('error', 'Gagal upload file');
 }
 
+public function delete()
+{
+    $file = $this->request->getPost('file');
+    $folder = $this->request->getPost('folder') ?? '';
+    $filePath = realpath($this->baseDir . ($folder ? $folder . '/' : '') . $file);
 
-    public function delete()
-    {
-        $file = $this->request->getPost('file');
-        $folder = $this->request->getPost('folder') ?? '';
-        $filePath = $this->baseDir . ($folder ? $folder . '/' : '') . $file;
+    // Debugging: Cek apakah path sudah benar
+    error_log("Mencoba menghapus: $filePath");
 
-        if (file_exists($filePath)) {
-            unlink($filePath);
+    if ($filePath && file_exists($filePath)) {
+        if (unlink($filePath)) {
             return redirect()->to('/file-manager/' . $folder)->with('success', 'File berhasil dihapus');
+        } else {
+            return redirect()->to('/file-manager/' . $folder)->with('error', 'Gagal menghapus file, cek izin akses.');
         }
-
-        return redirect()->to('/file-manager/' . $folder)->with('error', 'Gagal menghapus file');
     }
+
+    return redirect()->to('/file-manager/' . $folder)->with('error', 'File tidak ditemukan.');
+}
+
     public function rename()
     {
         $oldName = $this->request->getPost('old_name');
