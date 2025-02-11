@@ -26,30 +26,71 @@ class ApiController extends ResourceController
     public function create()
     {
         $json = $this->request->getJSON();
-        $this->model->insert([
-            'name' => $json->name,
-            'email' => $json->email
-        ]);
-        return $this->respondCreated(['message' => 'Data berhasil disimpan']);
+        if (!$json) {
+            return $this->failValidationErrors("Invalid JSON data");
+        }
+
+        $data = [
+            'username' => $json->username,
+            'email' => $json->email,
+            'city' => $json->city,
+            'password' => password_hash($json->password, PASSWORD_BCRYPT) // Amankan password
+        ];
+
+        if ($this->model->insert($data)) {
+            return $this->respondCreated(['message' => 'Data berhasil disimpan']);
+        } else {
+            return $this->fail('Gagal menyimpan data');
+        }
     }
+
 
     // Update data
     public function update($id = null)
     {
+        if (!$this->model->find($id)) {
+            return $this->failNotFound('Data tidak ditemukan');
+        }
+
         $json = $this->request->getJSON();
-        $this->model->update($id, [
-            'name' => $json->name,
-            'email' => $json->email
-        ]);
-        return $this->respond(['message' => 'Data berhasil diperbarui']);
+        $data = [];
+
+        if (isset($json->username)) {
+            $data['username'] = $json->username;
+        }
+
+        if (isset($json->email)) {
+            $data['email'] = $json->email;
+        }
+
+        if (isset($json->password)) {
+            $data['password'] = password_hash($json->password, PASSWORD_BCRYPT);
+        }
+
+        if (isset($json->city)) {
+            $data['city'] = $json->city;
+        }
+
+        if (!empty($data)) {
+            $this->model->update($id, $data);
+            return $this->respond(['message' => 'Data berhasil diperbarui']);
+        }
+
+        return $this->failValidationErrors('Tidak ada data yang diperbarui');
     }
+
 
     // Hapus data
     public function delete($id = null)
     {
+        if (!$this->model->find($id)) {
+            return $this->failNotFound('Data tidak ditemukan');
+        }
+
         $this->model->delete($id);
         return $this->respondDeleted(['message' => 'Data berhasil dihapus']);
     }
+
 }
 
 
@@ -107,8 +148,10 @@ class ApiController extends ResourceController
 //     Body (JSON):
 
 //     {
-//       "name": "Jane Doe",
-//       "email": "jane@example.com"
+//       "username": "Jane Doe",
+//       "email": "jane@example.com",
+        // "password" :"abcaderer"
+        // "city" :"Jakarta"
 //     }
 
 // Gunakan cURL:
@@ -169,7 +212,3 @@ class ApiController extends ResourceController
 // {
 //   "message": "Data berhasil dihapus"
 // }
-
-// Kesimpulan
-
-//     Jika semua metode (GET, POST, PUT, DELETE) bekerja dengan baik, berarti API RESTful di CodeIgniter 4 berjalan dengan sukses.

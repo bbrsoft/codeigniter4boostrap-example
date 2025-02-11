@@ -41,6 +41,6 @@ $routes->get('email/send', 'EmailController::send');
 // $routes->resource('api'); // Untuk API Server
 $routes->resource('api', ['controller' => 'ApiController']);
 
-$routes->get('client/users', 'ClientController::getAllUsers');
-$routes->get('client/user/(:num)', 'ClientController::getUser/$1');
-$routes->post('client/user', 'ClientController::addUser');
+$routes->get('client/getAllUsers', 'ClientController::getAllUsers');
+$routes->get('client/getUser/(:num)', 'ClientController::getUser/$1');
+$routes->post('client/addUser', 'ClientController::addUser');
