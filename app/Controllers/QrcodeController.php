@@ -5,7 +5,6 @@ namespace App\Controllers;
 use CodeIgniter\Controller;
 use Endroid\QrCode\QrCode;
 use Endroid\QrCode\Writer\PngWriter;
-use Endroid\QrCode\Label\Label;
 use Endroid\QrCode\Logo\Logo;
 
 class QrcodeController extends Controller
@@ -13,8 +12,8 @@ class QrcodeController extends Controller
     public function generate()
     {
         $text = 'https://yourwebsite.com'; // Data QR Code
-        $logoPath = WRITEPATH . 'uploads/logo.png'; // Pastikan logo tersedia
-        $savePath = WRITEPATH . 'uploads/qrcodes/'; // Direktori penyimpanan
+        $logoPath = FCPATH . 'uploads/logo.png'; // Pastikan logo tersedia
+        $savePath = FCPATH . 'uploads/qrcodes/'; // Direktori penyimpanan (public)
 
         // Pastikan direktori penyimpanan ada
         if (!is_dir($savePath)) {
@@ -37,16 +36,15 @@ class QrcodeController extends Controller
         }
 
         // Simpan file QR Code
-        $fileName = 'qrcode_' . time() . '.png'; // Nama unik untuk setiap QR
+        $fileName = 'qrcode_' . time() . '.png'; // Nama unik
         $filePath = $savePath . $fileName;
         $result->saveToFile($filePath);
 
         return $this->response->setJSON([
             'message' => 'QR Code berhasil dibuat',
-            'file_url' => base_url('writable/uploads/qrcodes/' . $fileName) // URL file yang bisa diakses
+            'file_url' => base_url('uploads/qrcodes/' . $fileName) // URL yang bisa diakses
         ]);
     }
-
 
     public function index()
     {

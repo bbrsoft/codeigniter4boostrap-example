@@ -13,6 +13,7 @@ $routes->get('excel/import-form', function () {
 $routes->post('excel/import', 'ExcelController::import');
 $routes->get('qrcode', 'QrcodeController::index');
 $routes->get('qrcode/generate', 'QrcodeController::generate');
+
 $routes->get('whatsapp/send', 'WhatsAppController::send');
 
 $routes->get('user', 'UserController::index');

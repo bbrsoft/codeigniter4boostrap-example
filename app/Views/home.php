@@ -194,6 +194,15 @@
             Method: DELETE
             Contoh: http://localhost:8080/client/deleteUser/1
                 </code></pre>
+
+                
+                <h1>Dokumentasi QRCODE</h1>
+    
+                <h2>1.QRCode dengan logo</h2>
+                <p>Generate QRcode.</p>
+                <pre><code>
+            URL: http://localhost:8080/qrcode
+                </code></pre>
         </div>
     </section>
     
