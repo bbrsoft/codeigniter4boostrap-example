@@ -20,7 +20,7 @@ CI_ENVIRONMENT = development
 # APP
 #--------------------------------------------------------------------
 
-app.baseURL = 'https://gallant-unity-production.up.railway.app/'
+# app.baseURL = ''
 # If you have trouble with `.`, you could also use `_`.
 # app_baseURL = ''
 # app.forceGlobalSecureRequests = false
@@ -30,10 +30,10 @@ app.baseURL = 'https://gallant-unity-production.up.railway.app/'
 # DATABASE
 #--------------------------------------------------------------------
 
- database.default.hostname = sql12.freesqldatabase.com
- database.default.database = sql12761441
- database.default.username = sql12761441
- database.default.password = k7rGNfLvcf
+ database.default.hostname = localhost
+ database.default.database = db_sc_ci
+ database.default.username = root
+ database.default.password = 
  database.default.DBDriver = MySQLi
  database.default.DBPrefix =
  database.default.port = 3306
