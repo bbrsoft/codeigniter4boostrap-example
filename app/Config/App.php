@@ -17,6 +17,7 @@ class App extends BaseConfig
      * E.g., http://example.com/
      */
     public $baseURL = 'https://codeigniter4boostrap-example-production.up.railway.app/';
+    // public $baseURL = 'http://localhost:8080';
 
     /**
      * Allowed Hostnames in the Site URL other than the hostname in the baseURL.

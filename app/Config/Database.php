@@ -28,7 +28,7 @@ class Database extends Config
         'DSN'          => '',
         'hostname'     => 'sql12.freesqldatabase.com',
         'username'     => 'sql12761441',
-        'password'     => 'k7rGNfLvcf ',
+        'password'     => 'k7rGNfLvcf',
         'database'     => 'sql12761441',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
