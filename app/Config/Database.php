@@ -26,10 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'          => '',
-        'hostname'     => 'localhost',
-        'username'     => 'root',
-        'password'     => '',
-        'database'     => 'db_sc_ci',
+        'hostname'     => 'sql12.freesqldatabase.com',
+        'username'     => 'sql12761441',
+        'password'     => 'k7rGNfLvcf ',
+        'database'     => 'sql12761441',
         'DBDriver'     => 'MySQLi',
         'DBPrefix'     => '',
         'pConnect'     => false,
