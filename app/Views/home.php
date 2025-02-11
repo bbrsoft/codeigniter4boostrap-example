@@ -203,6 +203,65 @@
                 <pre><code>
             URL: http://localhost:8080/qrcode
                 </code></pre>
+
+                <h1>Dokumentasi Surat PDF</h1>
+    
+                    <h2>1.PDF Qrcode dengan logo</h2>
+                    <p>Generate PDF dan  QRcode.</p>
+                    <pre><code>
+                URL: http://localhost:8080/pdf/surat
+                    </code></pre>
+
+                    <h2>2.PDF Upload</h2>
+                    <p>Generate PDF upload , view.</p>
+                    <pre><code>
+                URL: http://localhost:8080/documents
+                    </code></pre>
+
+                    <h1>Dokumentasi Email Google Hardcode</h1>
+    
+                    <h2>1.mengierim Email dri Gmail</h2>
+                    <p>gunakan smtp setting google dan link test.</p>
+                    <pre><code>
+                    URL: http://localhost:8080/email/send
+                    </code></pre>
+
+                    <h1>Dokumentasi Import / Export Ecxcel</h1>
+    
+                    <h2>1.Export</h2>
+                    <pre><code>
+                    URL: http://localhost:8080/excel/export
+                    </code></pre>
+
+                    <h2>2.Import</h2>
+                    <pre><code>
+                    URL: http://localhost:8080/excel/import-form
+                    </code></pre>
+
+                    <h1>Dokumentasi Kirim Pesan Whastsapp</h1>
+    
+                    <h2>1.twilio free gratis</h2>
+                    <p>untuk menggunakan fitur whastapp gunakan gateway gratis seperti twilio. link test ini</p>
+                    <pre><code>
+                    URL: http://localhost:8080/whatsapp/send
+                    </code></pre>
+
+                    <h1>Dokumentasi CRUD</h1>
+    
+                    <h2>1.fitur CRUD dan table</h2>
+                    <pre><code>
+                    URL: http://localhost:8080/user
+                    </code></pre>
+                    <pre><code>
+                    URL: http://localhost:8080/usercards
+                    </code></pre>
+
+                    <h1>Dokumentasi File Manger</h1>
+    
+                    <h2>1.File Manager</h2>
+                    <pre><code>
+                    URL: http://localhost:8080/file-manager
+                    </code></pre>
         </div>
     </section>
     
